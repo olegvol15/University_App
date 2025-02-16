@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Деталі студента</h2>
+
+  <div *ngIf="student; else noStudent">
+    <p><strong>Ім'я:</strong> {{ student.name }}</p>
+    <p><strong>Email:</strong> {{ student.email }}</p>
+    <p><strong>Телефон:</strong> {{ student.phone }}</p>
+    <p><strong>Факультет:</strong> {{ student.faculty }}</p>
+  </div>
+
+  <ng-template #noStudent>
+    <p style="color: red; font-weight: bold;">Студента не знайдено.</p>
+  </ng-template>
+</div>
+
+
+
+

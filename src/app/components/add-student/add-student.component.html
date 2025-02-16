@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Додати студента</h2>
+
+  <form (ngSubmit)="addStudent()">
+    <label for="name">Ім'я:</label>
+    <input id="name" type="text" [(ngModel)]="name" name="name" required placeholder="Введіть ім'я">
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" [(ngModel)]="email" name="email" required placeholder="Введіть email">
+
+    <label for="phone">Телефон:</label>
+    <input id="phone" type="text" [(ngModel)]="phone" name="phone" required placeholder="Введіть телефон">
+
+    <label for="faculty">Факультет:</label>
+    <input id="faculty" type="text" [(ngModel)]="faculty" name="faculty" required placeholder="Введіть факультет">
+
+    <button type="submit">Додати</button>
+  </form>
+</div>
+
+
+
+

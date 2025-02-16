@@ -1,3 +1,18 @@
 import { Routes } from '@angular/router';
+import { provideRouter } from '@angular/router';
 
-export const routes: Routes = [];
+import { HomeComponent } from './components/home/home.component';
+import { FacultyListComponent } from './components/faculty-list/faculty-list.component';
+import { StudentListComponent } from './components/student-list/student-list.component';
+import { StudentDetailComponent } from './components/student-detail/student-detail.component';
+import { AddStudentComponent } from './components/add-student/add-student.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'faculties', component: FacultyListComponent },
+  { path: 'faculty/:id', component: StudentListComponent },
+  { path: 'student/:id', component: StudentDetailComponent },
+  { path: 'add-student', component: AddStudentComponent }
+];
+
+export const appRouting = provideRouter(routes);

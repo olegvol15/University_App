@@ -1,0 +1,33 @@
+<div class="student-list-container">
+  <h2>Список студентов</h2>
+
+  <input 
+    type="text" 
+    [(ngModel)]="searchTerm" 
+    placeholder="Поиск студента..."
+  />
+
+  <ul>
+    <li *ngFor="let student of students | studentFilterPipe:searchTerm">
+      {{ student.name }} - {{ student.faculty }} - {{ student.phone }} - {{ student.email}}
+    </li>
+  </ul>
+
+  <p *ngIf="(students | studentFilterPipe:searchTerm).length === 0">
+    Студенты не найдены.
+  </p>
+
+  <button (click)="goToAddStudent()">Добавить студента</button>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+

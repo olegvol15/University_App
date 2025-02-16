@@ -1,0 +1,22 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .university-img {
+    width: 20%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+}

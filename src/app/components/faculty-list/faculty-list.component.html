@@ -1,0 +1,10 @@
+<div class="faculty-container">
+    <h2>Список факультетов</h2>
+    <ul>
+      <li *ngFor="let faculty of faculties">
+        <a [routerLink]="['/faculty', faculty.name]">{{ faculty.name }}</a>
+      </li>
+    </ul>
+    
+  </div>
+  
