@@ -1,22 +1,125 @@
 .home-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .university-img {
-    width: 20%;
-    max-width: 500px;
-    border-radius: 10px;
-    margin: 20px 0;
-  }
-  
-  h2 {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 50px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
 }
 
-p {
-    font-size: 20px;
-    text-align: justify;
+.achievements {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 20px;
+  top: 150px;
 }
+
+.reviews {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  flex-shrink: 0;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+}
+
+.achievements h3, .reviews h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.achievements ul, .reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.review-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-text {
+  font-size: 14px;
+}
+
+.btn-learn-more {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-learn-more:hover {
+  background: #0056b3;
+}
+
+.main-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.university-img {
+  width: 600px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.btn-apply {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-apply:hover {
+  background: #0056b3;
+}
+
+
+
+
+
+

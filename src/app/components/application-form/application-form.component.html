@@ -1,0 +1,41 @@
+<div class="form-container">
+  <h2>Форма подачи заявки</h2>
+  <form #f="ngForm" (ngSubmit)="submitApplication(f)">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" ngModel required minlength="2" #name="ngModel" placeholder="Введите ваше имя">
+    <div class="error-message" *ngIf="name.invalid && name.touched">
+      <span *ngIf="name.errors?.['required']">Поле обязательно</span>
+      <span *ngIf="name.errors?.['minlength']">Минимум 2 символа</span>
+    </div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email #email="ngModel" placeholder="Введите ваш email">
+    <div class="error-message" *ngIf="email.invalid && email.touched">
+      <span *ngIf="email.errors?.['required']">Поле обязательно</span>
+      <span *ngIf="email.errors?.['email']">Введите корректный email</span>
+    </div>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" ngModel required pattern="^[0-9]{10,15}$" #phone="ngModel" placeholder="Введите ваш телефон">
+    <div class="error-message" *ngIf="phone.invalid && phone.touched">
+      <span *ngIf="phone.errors?.['required']">Поле обязательно</span>
+      <span *ngIf="phone.errors?.['pattern']">Введите корректный номер (10-15 цифр)</span>
+    </div>
+
+    <label for="about">Расскажите о себе:</label>
+    <textarea id="about" name="about" ngModel required minlength="10" #about="ngModel" placeholder="Опишите ваше образование, опыт и цели"></textarea>
+    <div class="error-message" *ngIf="about.invalid && about.touched">
+      <span *ngIf="about.errors?.['required']">Поле обязательно</span>
+      <span *ngIf="about.errors?.['minlength']">Минимум 10 символов</span>
+    </div>
+
+    <button type="submit" [disabled]="f.invalid" class="btn-submit">Отправить</button>
+  </form>
+
+  <div *ngIf="message" class="success-message">
+    {{ message }}
+  </div>
+</div>
+
+  
+
